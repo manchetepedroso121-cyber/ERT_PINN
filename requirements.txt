@@ -1,0 +1,30 @@
+# SelfSup-KAN-ERT Dependencies
+# Tested with Python 3.9-3.13
+
+# Core ML
+torch>=2.0.0
+numpy>=1.24.0
+
+# KAN library
+pykan>=0.1.0
+
+# Geophysics forward modeling
+pygimli>=1.4.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Machine learning utilities
+scikit-learn>=1.2.0
+
+# Scientific computing (used for cKDTree in model_generators)
+scipy>=1.10.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Testing
+pytest>=7.0.0
+
+# Optional: IEEE paper generation
+# python-docx>=0.8.11

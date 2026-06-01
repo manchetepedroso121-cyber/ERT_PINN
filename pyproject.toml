@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "selfsup-kan-ert"
+version = "0.1.0"
+description = "Self-supervised pretraining + KAN + PINN for ERT inversion"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+dependencies = [
+    "torch>=2.0.0",
+    "numpy>=1.24.0",
+    "pykan>=0.1.0",
+    "pygimli>=1.4.0",
+    "matplotlib>=3.7.0",
+    "scikit-learn>=1.2.0",
+    "scipy>=1.10.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+paper = [
+    "python-docx>=0.8.11",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.setuptools.packages.find]
+include = ["models*", "data*", "pretrain*", "train*", "eval*"]
+exclude = ["tests*", "paper*", "figures*", "results*"]
